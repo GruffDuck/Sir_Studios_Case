@@ -34,10 +34,10 @@ public class Spawnert : MonoBehaviour
             GameObject spawn = Instantiate(spawnedobject, vec, Quaternion.identity);
             for (int j = 0; j < spawnobjects.Count; j++)
             {
-                if (vec == spawnobjects[j].transform.position) //ayný pozisyon var mý diye kontrol edelim.
+                if (vec == spawn.transform.position) //ayný pozisyon var mý diye kontrol edelim.
                 {
                     Destroy(spawn);
-                    spawn = Instantiate(spawnedobject, vec, Quaternion.identity);
+                    Spawned();
 
                 }
             }
